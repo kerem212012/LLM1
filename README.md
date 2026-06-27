@@ -62,6 +62,36 @@ This starts an interactive prompt where you can enter messages and receive strea
 - `main.py`: simple `rich` output example
 - `pyproject.toml`: project metadata and dependencies
 
+## Using uv
+
+You can use `uv` to manage the project environment and run the app.
+
+- Install `uv`:
+
+```bash
+python -m pip install uv
+```
+
+- Add project dependencies (optional):
+
+```bash
+uv add anthropic environs rich
+```
+
+- Sync the project environment (install dependencies):
+
+```bash
+uv sync
+```
+
+- Run the chat via `uv`:
+
+```bash
+uv run python chat.py
+```
+
+You can also run other scripts, e.g. `uv run python main.py` for the `rich` demo.
+
 ## Notes
 
 - `README.md` is referenced by `pyproject.toml`
